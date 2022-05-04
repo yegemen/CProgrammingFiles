@@ -1,0 +1,35 @@
+void göstericilerde printf("%.2f ",*(double*)p); ve printf("%.2f ",*((double*)p+1)); þeklinde tür dönüþümü yapýlýr.
+
+deðiþkenin adresini fonksiyona gönderirken ana fonksiyonda gönderdiðimiz yerde önüne & iþareti konur. fonksiyonlarýn parametre kýsmýnda * konur.
+
+fonksiyonlarýn parametre kýsmýnda önüne * konulan deðiþkenlere ana fonksiyondan herhangi bir deðiþkeni de diziyi de gönderebiliriz.(adresini)
+
+fonksiyonda return edeceðimiz deðiþkenin adresini tutmak istiyorsak fonksiyonda deðiþken tipinden sonra fonksiyon adýnýn önüne * konur. return da deðiþken adýnýn önüne & konur.
+ayrýca diziyi komple ana fonksiyona return etmemizi saðlar. diziyi return ederken önüne & konulmaz.
+
+fonksiyonun adresini direk ana fonksiyonda gösterebiliriz, ama pointer da tutmak istiyorsan þu þekilde tanýmlamalar yapýlýr:
+
+int (*p)(int);
+	p=kupu_al;
+
+int (*pf)(int*);
+	pf=p_kupu_al;
+
+diziyi fonksiyona normal veya pointer olarak gönderip strlen ile uzunluðunu tutmak istiyorsak string.h kütüphanesi tanýmlý olmalýdýr.
+
+char dizisine yazýlan string ifadeyi printf de %s ile ve sadece dizi adýný yazarak gösterebiliriz.
+
+pointer dizisi fonksiyon parametre kýsmnda *ad[] þeklinde yazýlýr.
+
+* iþareti göstecininin kendi tuttuðu yerdeki adresin içeriði ile ilgileniyor demektir. *, ** dikkat et.
+
+scanf ile karakter dizisi girerken baþýna & koymuyoruz.
+
+scanf sadece boþluk karakteri koyana kadar alýr.
+
+dizilerin içeriðini önüne * karakteri koyarak görebiliriz.
+
+pointer dizisinde %s de * kullanýlýr. pointer dizisi deðilse kullanýlmaz. %c lerde * yýldýz kullanýlýr.
+
+dizi adý dizinin baþlangýç adresini verir. mesela scanf("%d",sayi); kodu sayi dizisinin ilk indisine deðiþkenin baþýna & koymadan giriþ yapmamýzý saðlar.
+scanf("%s",stringifade);
